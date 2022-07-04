@@ -1,5 +1,8 @@
-package ua.com.software;public class Main {
+package ua.com.software;
+
+public class Main {
     public static void main(String[] args) {
+
         System.out.println("Hello world!");
     }
 }
