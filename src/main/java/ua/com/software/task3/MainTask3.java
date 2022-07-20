@@ -9,16 +9,16 @@ public class MainTask3 {
     public static void main(String[] args) {
         Laptop macBookAir = new Laptop();
         System.out.println("Laptop price initialize: " + macBookAir.getPrice() + "$");
+
         macBookAir.setPrice(700.00f);
         System.out.println("Laptop price user-definition: " + macBookAir.getPrice() + "$");
+
         macBookAir.setBatteryVolume(13000);
         macBookAir.setDisplayDiagonal(13);
         macBookAir.setBrand("Apple");
         macBookAir.setModel("mac Book 13'");
         macBookAir.show();
-
         System.out.println();
-
 
         TShirt starWars = new TShirt();
         System.out.println("T-Shirt price initialize: " + starWars.getPrice() + "$");

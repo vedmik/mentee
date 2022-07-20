@@ -3,11 +3,12 @@ package ua.com.software.task3.product.electronics;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import ua.com.software.log.Log;
 
 @Data
 @NoArgsConstructor
 @SuperBuilder
-public class Laptop extends Electronics {
+public class Laptop extends ElectronicsBase {
 
     private boolean sensorDisplay;
     private String keyboardLanguage;
@@ -16,8 +17,11 @@ public class Laptop extends Electronics {
 
     public void show(){
         super.show();
-        System.out.println("Sensor display: " + sensorDisplay);
-        System.out.println("Keyboard language: " + keyboardLanguage);
-        System.out.println("Battery volume: " + batteryVolume + "mA/h");
+        Log.saveLog(String.join("\n", new String[]
+                {
+                        "Sensor display: " + sensorDisplay,
+                        "Keyboard language: " + keyboardLanguage,
+                        "Battery volume: " + batteryVolume + "mA/h"
+                }));
     }
 }

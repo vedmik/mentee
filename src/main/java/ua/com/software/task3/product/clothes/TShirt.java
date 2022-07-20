@@ -3,10 +3,12 @@ package ua.com.software.task3.product.clothes;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import ua.com.software.log.Log;
+
 @Data
 @NoArgsConstructor
 @SuperBuilder
-public class TShirt extends Clothes {
+public class TShirt extends ClothesBase {
     private String gateOption;
     private int length;
     private int sleeveLength;
@@ -14,9 +16,12 @@ public class TShirt extends Clothes {
 
     public void show(){
         super.show();
-        System.out.println("Gate option: " + gateOption);
-        System.out.println("T-Shirt length: " + length + "cm");
-        System.out.println("Sleeve length: " + sleeveLength + "cm");
-        System.out.println("Print: " + print);
+        Log.saveLog(String.join("\n", new String[]
+                {
+                        "Gate option: " + gateOption,
+                        "T-Shirt length: " + length + "cm",
+                        "Sleeve length: " + sleeveLength + "cm",
+                        "Print: " + print
+                }));
     }
 }
