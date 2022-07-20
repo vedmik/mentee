@@ -1,34 +1,33 @@
 package ua.com.software.task1;
 
+import lombok.Data;
+import ua.com.software.log.Log;
+
+@Data
 public abstract class Animal {
     private int age;
     private String name;
-    private String gender;
+    private Gender gender;
+    private String sound;
 
-    public abstract void makeSound();
-    public abstract void eat(String food);
-
-    public int getAge() {
-        return age;
+    public Animal(int age, String name, Gender gender) {
+        setAge(age);
+        setName(name);
+        setGender(gender);
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void makeSound(){
+        Log.saveLog(String.format("%s %s say: %s",
+                this.getClass().getSimpleName(), this.getName(), this.getSound()));
     }
 
-    public String getName() {
-        return name;
+    public void eat(String food){
+        Log.saveLog(String.format("%s %s eat: %s",
+                this.getClass().getSimpleName(), this.getName(), food));
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
+    public String toString(){
+        return String.format("%s name: %s, age: %s, gender: %s",
+                this.getClass().getSimpleName(), this.getName(), this.getAge(), this.getGender().getGender());
     }
 }
