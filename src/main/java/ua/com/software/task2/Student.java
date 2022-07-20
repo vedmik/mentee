@@ -1,18 +1,23 @@
 package ua.com.software.task2;
 
-public class Student extends People{
+import lombok.Data;
+
+@Data
+public class Student extends People {
     private String course;
 
     public Student(String firstname, String lastName, int age, String course) {
         super(firstname, lastName, age);
-        this.course = course;
+        this.setCourse(course);
     }
 
-    public String getCourse() {
-        return course;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
+    @Override
+    public String toString() {
+        return String.join("\n", new String[]
+                {
+                   super.toString(),
+                   "Course: " + this.getCourse()
+                });
     }
 }
+

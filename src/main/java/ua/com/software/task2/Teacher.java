@@ -1,5 +1,8 @@
 package ua.com.software.task2;
 
+import lombok.Data;
+
+@Data
 public class Teacher extends People {
 
     private String department;
@@ -8,34 +11,20 @@ public class Teacher extends People {
 
     public Teacher(String firstname, String lastName, int age, String department) {
         super(firstname, lastName, age);
-        this.department = department;
+        this.setDepartment(department);
     }
 
-    public int salary(){
-        return wage * totalHours;
+    public int getTotalSalary(){
+        return getWage() * getTotalHours();
     }
 
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public int getWage() {
-        return wage;
-    }
-
-    public void setWage(int wage) {
-        this.wage = wage;
-    }
-
-    public int getTotalHours() {
-        return totalHours;
-    }
-
-    public void setTotalHours(int totalHours) {
-        this.totalHours = totalHours;
+    @Override
+    public String toString() {
+        return String.join("\n", new String[]
+                {
+                        super.toString(),
+                        "Department: " + this.getDepartment(),
+                        "Salary: " + getTotalSalary() + "$"
+                });
     }
 }
