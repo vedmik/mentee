@@ -1,23 +1,22 @@
-package ua.com.software.task3.product.sports;
+package ua.com.software.work1.task3.products.electronics;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import ua.com.software.log.Log;
 
+
 @Data
 @NoArgsConstructor
 @SuperBuilder
-public class FitnessEquipment extends SportsBase {
-    private String applicationMethod;
-    private boolean waterproof;
+public class TV extends ElectronicsBase {
+    private String maxResolution;
 
     public void show(){
         super.show();
         Log.saveLog(String.join("\n", new String[]
                 {
-                        "Application method: " + applicationMethod,
-                        "waterproof: " + waterproof
+                        "Maximal resolution: " + maxResolution
                 }));
     }
 }

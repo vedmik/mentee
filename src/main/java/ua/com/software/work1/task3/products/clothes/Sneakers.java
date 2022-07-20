@@ -1,4 +1,4 @@
-package ua.com.software.task3.product.clothes;
+package ua.com.software.work1.task3.products.clothes;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

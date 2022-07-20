@@ -1,8 +1,10 @@
-package ua.com.software.task2;
+package ua.com.software.work1.task2;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public abstract class People {
     private String firstname;
     private String lastName;

@@ -1,4 +1,4 @@
-package ua.com.software.task1;
+package ua.com.software.work1.task1;
 
 public class Cat extends Animal{
     public Cat(int age, String name, Gender gender) {

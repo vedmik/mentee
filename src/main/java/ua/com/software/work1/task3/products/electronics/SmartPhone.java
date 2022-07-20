@@ -1,4 +1,4 @@
-package ua.com.software.task3.product.electronics;
+package ua.com.software.work1.task3.products.electronics;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

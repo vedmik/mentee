@@ -1,4 +1,4 @@
-package ua.com.software.task1;
+package ua.com.software.work1.task1;
 
 import lombok.Data;
 import ua.com.software.log.Log;

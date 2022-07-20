@@ -1,4 +1,4 @@
-package ua.com.software.task3.product;
+package ua.com.software.work1.task3.products;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +8,7 @@ import ua.com.software.log.Log;
 @Data
 @NoArgsConstructor
 @SuperBuilder
-public abstract class ProductBase {
+public abstract class ProductsBase {
     private int productCode;
     private String brand;
     private float price = 1.00f;

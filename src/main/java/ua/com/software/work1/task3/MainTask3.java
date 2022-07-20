@@ -1,9 +1,9 @@
-package ua.com.software.task3;
+package ua.com.software.work1.task3;
 
-import ua.com.software.task3.product.clothes.TShirt;
-import ua.com.software.task3.product.electronics.Laptop;
-import ua.com.software.task3.product.electronics.SmartPhone;
-import ua.com.software.task3.product.sports.FitnessEquipment;
+import ua.com.software.work1.task3.products.clothes.TShirt;
+import ua.com.software.work1.task3.products.electronics.Laptop;
+import ua.com.software.work1.task3.products.electronics.SmartPhone;
+import ua.com.software.work1.task3.products.sports.FitnessEquipment;
 
 public class MainTask3 {
     public static void main(String[] args) {

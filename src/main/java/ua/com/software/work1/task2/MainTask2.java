@@ -1,4 +1,4 @@
-package ua.com.software.task2;
+package ua.com.software.work1.task2;
 
 
 import ua.com.software.log.Log;

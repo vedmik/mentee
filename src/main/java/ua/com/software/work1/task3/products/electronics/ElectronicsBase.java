@@ -1,15 +1,15 @@
-package ua.com.software.task3.product.electronics;
+package ua.com.software.work1.task3.products.electronics;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import ua.com.software.log.Log;
-import ua.com.software.task3.product.ProductBase;
+import ua.com.software.work1.task3.products.ProductsBase;
 
 @Data
 @NoArgsConstructor
 @SuperBuilder
-public abstract class ElectronicsBase extends ProductBase {
+public abstract class ElectronicsBase extends ProductsBase {
     private String powerSupply;
     private int voltage;
     private String operationSystem;
