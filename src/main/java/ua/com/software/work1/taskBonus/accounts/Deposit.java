@@ -6,11 +6,8 @@ public class Deposit extends Account {
 
     private final double balanceWithoutInterestRate = 1000.00D;
 
-    public Deposit(double balance, int interestRate, Customer customer) {
-        super();
-        setInterestRate(interestRate);
-        setBalance(balance);
-        setCustomer(customer);
+    public Deposit(double balance, float interestRate, Customer customer) {
+        super(balance, interestRate, customer);
     }
 
     public double withdrawMoney(double quantity){
@@ -19,10 +16,11 @@ public class Deposit extends Account {
     }
 
     @Override
-    public void setBalance(double balance) {
-        super.setBalance(balance);
-        if(getInterestRate() != 0 && getBalance() < balanceWithoutInterestRate){
-            setInterestRate(0);
+    public float calculateInterest(int month) {
+        if(getBalance() < balanceWithoutInterestRate && getBalance() > 0){
+            return 0;
+        } else {
+            return super.calculateInterest(month);
         }
     }
 }

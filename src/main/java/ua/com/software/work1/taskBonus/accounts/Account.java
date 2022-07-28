@@ -11,7 +11,7 @@ public abstract class Account {
     private float interestRate;
     private Customer customer;
 
-    public Account(double balance, int interestRate, Customer customer) {
+    public Account(double balance, float interestRate, Customer customer) {
         setBalance(balance);
         setInterestRate(interestRate);
         setCustomer(customer);
@@ -23,6 +23,10 @@ public abstract class Account {
 
     public double depositMoney(double quantity){
         setBalance(getBalance() + quantity);
+        return getBalance();
+    }
+
+    public double withdrawMoney(double quantity){
         return getBalance();
     }
 }

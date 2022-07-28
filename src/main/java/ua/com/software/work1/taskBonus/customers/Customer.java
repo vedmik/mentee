@@ -6,15 +6,9 @@ import lombok.Data;
 public abstract class Customer{
 
     private String name;
-    private String surname;
+    private TypeOfActivity activity;
 
-    private int numberOfMonthsWithoutInterestRateForDeposits;
-
-    private int numberOfMonthsWithoutInterestRateForMortgage;
-
-
-    public Customer(String name, String surname) {
+    public Customer(String name) {
         this.name = name;
-        this.surname = surname;
     }
 }
